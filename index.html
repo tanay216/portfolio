@@ -5,8 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tanay Jain</title>
   <style>
-    body, html { margin: 0; padding: 0; height: 100%; }
-    iframe { border: none; width: 100%; height: 100%; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100vh; /* Viewport height */
+      display: block;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      iframe {
+        height: calc(100vh - 0px); /* Adjust iframe height for mobile screens */
+      }
+    }
   </style>
 </head>
 <body>
